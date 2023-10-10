@@ -1,4 +1,3 @@
-import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -86,21 +85,28 @@ public class OddEven {
 
 	private void createPdf() throws Exception {
 		PdfDocument pdf = new PdfDocument(new PdfWriter(new FileOutputStream(DEST)));
-
-		// TODO create a document
-
-		// TODO create a table
-
+		Document doc = new Document(pdf);
+		Table table = new Table(6);
+		
 		for (int i = 0; i < 600; i++) {
+			Cell cell = new Cell();
+			//TODO Add logic to figure out if the cell is odd and even.
+			{
+				//Setting background color into the cell
+				cell.setBackgroundColor(ColorConstants.BLUE);
+			}
 
-			// TODO add cells to the table that are alternating red and blue
-
+			{
+				cell.setBackgroundColor(ColorConstants.RED);
+			}
+			
+			table.addCell(cell);
 		}
 
-		// TODO Add table to the document 
+		// TODO Add table to document
 
-		// TODO Add image to the document 
+		// TODO Add image to document
 
-		pdf.close(); 
+		doc.close(); 
 	}
 }

@@ -36,19 +36,16 @@ public class Sort {
 			array[i] = (int) (Math.random() * 20 + 1);
 		}
 		PdfDocument pdf = new PdfDocument(new PdfWriter(DEST));
-
-		//TODO create a document
-
-		//TODO add printArray table to the document
-	
-		//TODO add sorted printArray table to the document
-
+		Document doc = new Document(pdf);
+		doc.add(new Paragraph("Unsorted"));
+		doc.add(printArray(array));
+		doc.add(new Paragraph("Sorted"));
+		doc.add(printArray(sort(array)));
 		pdf.close();
 	}
 
 	private Table printArray(int[] array) {
-		// TODO create a table
-
+		Table table = new Table(1);
 		for (int i = 0; i < array.length; i++) {
 			// TODO Add number to the table cell
 
