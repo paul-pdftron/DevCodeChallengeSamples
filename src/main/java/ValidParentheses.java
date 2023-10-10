@@ -32,7 +32,7 @@ public class ValidParentheses {
 
 	public static boolean isValid(String x) {
 		// Your code goes here
-
+		
 		return false;
 
 	}

@@ -91,6 +91,7 @@ public class OddEven {
 		for (int i = 0; i < 600; i++) {
 			Cell cell = new Cell();
 			//TODO Add logic to figure out if the cell is odd and even.
+
 			{
 				//Setting background color into the cell
 				cell.setBackgroundColor(ColorConstants.BLUE);
@@ -99,13 +100,11 @@ public class OddEven {
 			{
 				cell.setBackgroundColor(ColorConstants.RED);
 			}
-			
 			table.addCell(cell);
 		}
 
-		// TODO Add table to document
-
-		// TODO Add image to document
+		// Add table to document
+		doc.add(table);
 
 		doc.close(); 
 	}

@@ -31,6 +31,7 @@ public class AddDigit {
 
 		// TODO: Implement logic to return one digit sum.
 
+		return 0;
 	}
 
 }
