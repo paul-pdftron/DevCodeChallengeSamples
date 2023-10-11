@@ -11,6 +11,8 @@ Every close bracket has a corresponding open bracket of the same type.
  
 
 Example 1:
+Input: s = "([][{}])"
+Output: true
 
 Input: s = "()"
 Output: true
@@ -27,7 +29,10 @@ public class ValidParentheses {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		System.out.println(isValid("()"));
 		System.out.println(isValid("()[]{}"));
+		System.out.println(isValid("([][{}])"));
+		System.out.println(isValid("(]"));
 	}
 
 	public static boolean isValid(String x) {
