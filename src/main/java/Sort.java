@@ -48,7 +48,7 @@ public class Sort {
 		Table table = new Table(1);
 		for (int i = 0; i < array.length; i++) {
 			// Add number to the table cell
-			table.addCell(String.valueOf(i));
+			table.addCell(String.valueOf(array[i]));
 		}
 		return table;
 	}
